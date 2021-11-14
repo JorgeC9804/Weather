@@ -27,7 +27,7 @@ const Home = ({setActive}) => {
         setCurrent({});
         setCondiction({});
         setMessageError('');
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${nameCity}&aqi=no`);
+        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${nameCity}&aqi=yes`);
         const result = await response.json();
         const {location} = result;
         location ? setError(false) : setError(true);
