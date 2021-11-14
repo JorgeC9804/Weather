@@ -1,0 +1,81 @@
+.form-principal {
+    position: absolute;
+    top: 150px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.input-search {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    width: 80%;
+    padding: 12px;
+    color: cadetblue;
+    border-radius: 4px;
+    font-size: 20px;
+    background: none;
+    outline-width: 0;
+    display: flex;
+    height: 28px;
+    box-shadow: 0px 10px 10px;
+}
+.input-search:hover {
+    color: rgb(18, 114, 117);
+}
+.info-weather {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(8, 61, 75, 0.473);
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+.link {
+    text-decoration: none;
+    color: black;
+}
+.sec-wea {
+    display: flex;
+    align-items: center;
+}
+.weather {
+    position: relative;
+    top: 140px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+section img {
+    width: 50px;
+    height: 50px;
+}
+section div {
+    display: flex;
+}
+.loader {
+    position: relative;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.response {
+    position: relative;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form img {
+    width: 39px;
+    height: 39px;
+}
+form button {
+    position: relative;
+    top: 13px;
+    background: white;
+    border: 0px
+}

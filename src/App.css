@@ -1,0 +1,8 @@
+.App {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#07fc8a9d, #2092fcb4, white);
+  /*background: linear-gradient(#6507fc, #fc7820, white);*/
+  height: 100vh;
+}
+

@@ -1,0 +1,79 @@
+.complement {
+    position: absolute;
+    top: 290px;
+    /*border: 1px solid;/**/
+    width: 90%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+}
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.column {
+    align-items: center;
+    width: 50%;
+}
+.link-country {
+    /*background-color: burlywood;*/
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid rgba(105, 105, 105, 0.356);
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+.weather-country {
+    display: flex;
+    align-items: center;
+    /*background-color: rgb(251, 255, 0);/**/
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+}
+.weather-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    /*background-color: darkorange;/**/
+}
+.weather-tem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+/*---------------------------------News Section----------------------------------*/
+.sec-news {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.news-1 {
+    display: flex;
+    justify-content: center;
+    /*border: 1px solid;*/
+    height: 50%;
+}
+.news-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid;*/
+    height: 50%;
+}
+.link {
+    text-decoration: none;
+    color: black;
+}
