@@ -11,7 +11,7 @@ const InformationWeather = ({setActive, active}) => {
 
     useEffect( () => {
         const countryResponse = async () => {
-            const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${regionName}&aqi=no`);
+            const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${regionName}&aqi=yes`);
             const result = await response.json();
             setCurrent(result.current);
             setCondition(result.current.condition);

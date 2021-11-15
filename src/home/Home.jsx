@@ -34,7 +34,7 @@ const Home = ({setActive}) => {
         location ? setError(false) : setError(true);
         location ? setLocation(result.location) : setMessageError(result.error.message);
         location ? setCurrent(result.current) :  setMessageError(result.error.message);
-        location ? setCondiction(result.current.condition) :  setMessageError(result.error.message);
+        location ? setCondiction(result.current.condition) : setMessageError(result.error.message);
         setLoader(true);
         setActive(true);
     };    
