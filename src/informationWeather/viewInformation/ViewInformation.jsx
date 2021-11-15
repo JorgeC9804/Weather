@@ -29,7 +29,7 @@ const ViewInformation = ({current, condition, location, setActive, active}) => {
         event.preventDefault();
         event.target.reset();
         setLoader(true);
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${nameCountry}&aqi=si`);
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${nameCountry}&aqi=yes`);
         const result = await response.json();
         const { location } = result;
         if (location === undefined) {
