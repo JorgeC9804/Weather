@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import InsideSearch from "./InsideSearch";
-import Loader from "../../loader/Loader";
 import '../InformationWeather.styles.css';
 
 const ViewInformation = ({current, condition, location, setActive, active}) => {
