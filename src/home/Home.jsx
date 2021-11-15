@@ -45,7 +45,7 @@ const Home = ({setActive}) => {
             const result = await response.json();
             console.log(result);
         };
-        peticion()
+        peticion();
     }, [] )
  
     return (

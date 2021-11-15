@@ -12,7 +12,7 @@ const CountryWeather = ({country, setActive}) => {
 
     useEffect( () => {
         const countryResponse = async () => {
-            const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${country}&aqi=si`);
+            const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${country}&aqi=yes`);
             const result = await response.json();
             setCountries(result.location.country);
             setConditionClouds(result.current.condition.icon);

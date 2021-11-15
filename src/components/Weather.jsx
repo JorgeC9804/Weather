@@ -7,10 +7,6 @@ const Weather = ({location, condition}) => {
     const { icon } = condition;
     if(icon === undefined) console.log()
 
-    // https://www.accuweather.com/es/world-weather
-
-   
-
     return (
         <div className='info-weather'>
             {
