@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Complement from "../categories/Complement";
 import Weather from "../components/Weather";
 import WeatherSearch from "../components/WeatherSearch";
@@ -27,8 +27,9 @@ const Home = ({setActive}) => {
         setCurrent({});
         setCondiction({});
         setMessageError('');
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${nameCity}&aqi=yes`);
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${nameCity}&aqi=yes`);
         const result = await response.json();
+        console.log(result);
         const {location} = result;
         location ? setError(false) : setError(true);
         location ? setLocation(result.location) : setMessageError(result.error.message);
@@ -37,6 +38,15 @@ const Home = ({setActive}) => {
         setLoader(true);
         setActive(true);
     };    
+
+    useEffect( () => {
+        const peticion = async () => {
+            const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=Canada&aqi=yes`);
+            const result = await response.json();
+            console.log(result);
+        };
+        peticion()
+    }, [] )
  
     return (
         <div className='principal'>
