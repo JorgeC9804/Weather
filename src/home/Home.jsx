@@ -66,9 +66,9 @@ const Home = ({setActive}) => {
                         />
                     </section>
             }
-            <section className='complement'>
+            {/*<section className='complement'>
                 <Complement setActive={setActive}/>
-            </section>
+            </section>*/}
         </div>
     )
 };
