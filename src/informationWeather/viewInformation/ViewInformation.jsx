@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import InsideSearch from "./InsideSearch";
-import '../InformationWeather.styles.css'
+import Loader from "../../loader/Loader";
+import '../InformationWeather.styles.css';
 
 const ViewInformation = ({current, condition, location, setActive, active}) => {
 
@@ -19,6 +20,7 @@ const ViewInformation = ({current, condition, location, setActive, active}) => {
     const [cloudCurrent, setCloudCurrent] = useState(0);
     const [windCurrent, setWindCurrent] = useState(0);
     const [error, setError] = useState(false);
+    const [loader, setLoader] = useState(false);
 
     const handleSearch = ({value}) => {
         setNameCountry(value);
@@ -27,6 +29,7 @@ const ViewInformation = ({current, condition, location, setActive, active}) => {
     const handleSumbit = async (event) => {
         event.preventDefault();
         event.target.reset();
+        setLoader(true);
         const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=3641124806774e148e622341211909&q=${nameCountry}&aqi=si`);
         const result = await response.json();
         const { location } = result;
@@ -44,7 +47,8 @@ const ViewInformation = ({current, condition, location, setActive, active}) => {
             setTextCurrent(result.current.condition.text);
             setCloudCurrent(result.current.cloud);
             setWindCurrent(result.current.wind_kph);
-        }
+        };
+        setLoader(false);
     };
 
     return ( 
@@ -67,7 +71,8 @@ const ViewInformation = ({current, condition, location, setActive, active}) => {
                     </div>
                 </div>
             </section>
-            { error ? <section className='error'>Country Not Found</section> : <></> }   
+            { error ? <section className='error'>Country Not Found</section> : <></> } 
+            { loader ? <div className='loader'>loading...</div> : <></>}
             <section className='general'>
                 <div className='card-info'>
                     <div className='column-1'>
