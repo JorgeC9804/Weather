@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import Complement from "../categories/Complement";
+import Complement from "../categories/Complement";
 import Weather from "../components/Weather";
 import WeatherSearch from "../components/WeatherSearch";
 import './Home.styles.css';
