@@ -16,7 +16,6 @@ const InformationWeather = ({setActive, active}) => {
             setCurrent(result.current);
             setCondition(result.current.condition);
             setLocation(result.location);
-            //console.log(result);
         };
         countryResponse();
     }, [regionName] );
